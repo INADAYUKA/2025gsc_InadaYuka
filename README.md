@@ -1,1 +1,62 @@
+# 2025gsc_YukaInada 
+2025年ゼミ論から2026年卒論にかけての研究
 
+## Blenderを用いた横浜駅周辺の混雑エリア・危険エリアの立体的な把握
+
+横浜駅周辺を立体的に理解することが可能になる。卒論時にはウェブサイトもしくはアプリケーションを作成し、人々の混雑状況確認や緊急時の避難経路即決などに役立てる。
+
+## 概要/Abstract
+本研究では、自身の生まれ故郷であり観光地でもある横浜駅周辺をBlenderや衛星データを用いて調査する。横浜駅は国内有数の巨大ターミナルであり、多くの人々の通勤通学の拠点であると同時に、横浜ベイクオーターや中華街など、神奈川県を代表するスポットの密集地でもある。そのため、駅周辺は日常と観光、大型イベントになどにより複雑なパターンを示すだろう。歴史的に人類はこれまで紙地図やGoogle Mapsに依拠してきたが、混雑や災害時の危険エリアを十分に理解するため、本研究はBlenderによる3D化を通じて、人々の移動を視覚的かつ体感的に理解することで、都市観光における回遊性の分析や、ハザードマップの分かりやすさアップへの応用の可能性を提示する。
+
+The purpose of this study is to use Blender to conduct a 3D simulation of people's movements and behaviors around Yokohama Station, my hometown and a tourist destination. Yokohama Station is one of Japan's largest terminals, serving as a hub for many commuters and students, while also housing Kanagawa Prefecture's most iconic attractions, such as Yokohama Bay Quarter and Chinatown. Therefore, the flow of people around the station will likely exhibit complex patterns due to factors such as daily life, tourism, and large-scale events. Historically, humans have relied on paper maps and Google Maps, but to fully understand the area's role as an evacuation route during congestion and disasters, this study uses Blender to create a 3D simulation of people's movements, providing a visual and experiential understanding of their movements. This suggests potential applications for analyzing urban tourism and improving the clarity of evacuation routes.
+
+## 導入/Introduction
+横浜駅周辺は非常に多様な人々が行き交うエリアである。このような大都市の複雑さは混雑や災害時の避難という観点でも重要な課題となる。空間把握ができないままでは、安全で効率的な移動や素早い避難が難しくなる可能性があり、2D地図は立体的な構造を直感的に捉えるには限界がある。そこで本研究では、横浜駅周辺を混雑状況マップ・ハザードマップとして3D空間上に表現する。イベント時や閑散時の観光地内の混雑エリア分析や、災害時における避難の困難なエリアの特定につなげていきたい。また、卒論時には、単なる可視化のみならず、人の動きをリアルタイムで重ねて見ることで、横浜における人々の動きや効率的な避難経路をより具体的に示すことを目指す。
+
+## 研究目的
+
+横浜駅周辺における人の動きを3Dシミュレーションし、従来の2D地図では捉えにくい混雑状況や災害時のシミュレーションを考察する。
+
+日常から特定イベント時まで、多様な動きパターンを比較しデータをとる事で、より正確に「さまざまな顔の横浜」を見られる立体地図・人流可視化地図を作成する。
+
+DXを用いた都市データサイト・アプリに応用可能な情報を作ることで、防災や観光に役立つ。
+実際に、三次元都市モデルに関する研究論文において、このような分析は空間理解に関する人間と機械の差異を明らかにし、3D表現は2Dだけでは得られない知見を引き出す可能性があると述べられていた(井筒・山野,2018)。
+将来的に卒論で用いることとなれば、Webサイトやアプリで一般市民や災害救助者、イベント管理者などが閲覧できるプラットフォーム化を目指す。
+
+## 研究方法/Method
+
+1. データ収集
+- 衛星データ：Copernicus Blowser - Sentinel1
+- ハザードマップ：国土地理院 - 重ねるハザードマップ、重ねるハザードマップ3D
+- 従来2Dマップ：OpenStreetMap、Google Maps
+- 観光・イベント情報：横浜市観光情報（横浜マラソンやお城EXPOの特設サイト等）
+
+2. 3Dモデリングとシミュレーション
+- Blenderで駅周辺空間（駅前、駅付近のビル、歓楽街）を3D可視化。
+- ハロウィンやクリスマス、新学期、コロナ禍などさまざまな状況下を衛星データから観察。
+- 災害時に避難が難しそうだと考察した建物の提示（建物の高さとハザードマップ資料を軸に考える）
+
+【分析フレーム】
+- 多くの人がこれまで用いてきた2D地図と比較し、今回3D地図(将来的にはサイトやアプリ)を作成する意義を考える。
+- さまざまな年の多様なイベント時や閑散時を比較し、混雑している場所を考察する。
+- 2Dハザードマップと立体模型を重ねて感じた危険エリアを提示する。
+
+研究範囲については駅から徒歩5〜10分圏を予定している。
+駅周辺の百貨店やベイクォーター、横浜中華街までを範囲に含むことで、より役立つサイト作りができそうであったため。
+また、Blenderで3Dモデリングを行う際のことを踏まえ、駅とその近辺までに絞ることで現実的な計画にした。
+
+## 結果/Result
+衛星データやハザードマップを、Blenderで作成した3D地図と重ねることによる分析を行った。まず、Copernicus BrowserではSentinel-1のUrban Areas Scriptを用い、イベント開催日や時期的要因による都市の賑わいの違いを比較した。衛星データは人流を直接示すものではないが、異なる日の都市へのレーダー反射の差異を比較することで、人々による活動の増減を間接的に捉えることを目的とした。比較対象として、ハロウィンやクリスマス、新学期開始日、大規模イベントの開催日など複数の日付を選定した。その結果、複数のイベントが重なった日には、他の日と比べてより広範囲で高い反射が確認され、想定以上に賑わいが集中している様子が見られた。
+また、ハザードマップを3D地図と合わせることで、防災的観点からの検討も行った。津波や洪水の危険度が高く表示されるエリアと、高層ビルや観光施設が集積するエリアを立体的に観察した結果、川沿いや臨海部に位置するエリアは高層で逃げにくく災害リスクも高いビルや観光地を特定できた。従来の2D防災マップでは捉えにくかった高さを3Dで表現することにより、より危険性の高いエリアや避難の難しさを直感的に理解できる点が、本手法の有効性・従来の3Dハザードマップと比較した優位性として示された。
+https://github.com/furuhashilab/2025gsc_InadaYuka/issues/13
+
+## 考察/Discussion
+衛星データの比較を行う前から2024年10月27日は横浜スタジアムでの日本シリーズ第2戦と横浜マラソン2024という2つの大きなイベントの開催日であり、混雑すると予想していたが、ハロウィンやクリスマスよりも混雑していたことには驚いた。また、横浜市について立体的に見られる従来の防災マップの代表的な先例には、国土地理院の重ねるハザードマップや、神奈川県土砂災害警戒情報システムがある。しかし、3D機能を使用しても、2D地図を斜めにしたような見た目になるだけで、具体的な建物の高さや空間を立体的に見づらい部分があった。今回blenderで作成した3Dマップと重ねながら見ていったことにより、津波や高潮が起きる危険性の高いエリアにある、逃げづらい高層ビルや建物の密集地を目で見て確認することを可能にした。
+
+## まとめ/Conclusion
+本研究では、横浜駅周辺を対象に、衛星データやハザードマップをBlenderで作成した3D地図と重ねながら観察することによって、混雑エリアや危険エリアをより立体的に把握する手法を検討した。その結果、イベント時の賑わいの特徴や、臨海部・川沿いに位置する高層建築物周辺の災害リスクを、従来の2D地図よりも直感的に理解できる可能性が示された。今後は、Unityを用いてリアルタイムの人流データを取り入れたWebサイトやアプリケーションの作成・完成を目指し、混雑状況把握や災害時の効率的な避難経路の把握に有効な可視化手法としての展開を検討したい。
+
+## 参考文献
+https://docs.google.com/spreadsheets/d/167k3vbcYbNHPKjOMi6sgdssJF4iwJq3PYJ1As2J237M/edit?usp=drivesdk
+## 発表資料
+https://www.canva.com/design/DAG__j3vuig/i39HBAilVVOBzwMBQ5Jm6Q/view?utm_content=DAG__j3vuig&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h072da034da
